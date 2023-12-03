@@ -34,7 +34,7 @@ header {
 }
 
 header h1 {
-  font-size: 3.5em;
+  font-size: 1.6em;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: lighter;
@@ -101,7 +101,7 @@ nav a {
   gap: 10px;
   padding: 20px;
   color: var(--dark);
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .call-us {
@@ -203,7 +203,7 @@ section p {
 }
 
 #gallery {
-  margin: -10px;
+  margin: -10px 0;
 }
 
 #gallery img {
@@ -223,12 +223,13 @@ footer a {
   text-decoration: none;
 }
 
-@media (min-width: 1024px) {
-  #about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 3.5em;
+  }
+
+  .cta article {
+    font-size: 1.3em;
   }
 }
 
@@ -267,4 +268,13 @@ footer a {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+@media (min-width: 1024px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }  
 }

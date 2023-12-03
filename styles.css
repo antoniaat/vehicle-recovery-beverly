@@ -1,5 +1,10 @@
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --yellow: #ffc326;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font);
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
@@ -7,40 +12,56 @@ body {
 }
 
 header {
-    background-image: url(../header.svg);
-    background-size: cover;
-    background-position: left;
-    min-height: 350px;
-    text-align: center;
-    padding: 90px 0 95px 0;
-    position: relative;
-    z-index: 1;
+  background-image: url(/images/header.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  text-align: center;
+  padding: 90px 0 95px 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-content {
-    max-width: 30%;
-    padding: 0 26%;
-    text-align: left;
+  max-width: 55%;
+  text-align: center;
+  color: white;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+header h1 span {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.3em;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  background-color: #181618;
+  align-items: center;
+  background-color: rgba(35, 35, 35, 0.8);
   padding: 10px 0;
   position: fixed;
-  top: 0; /* Stick to the top of the viewport */
+  top: 0;
   width: 100%;
   z-index: 2;
+  box-shadow: -5px -3px 12px -4px #494242;
 }
 
 nav a {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--main-font);
   color: white;
   text-decoration: none;
   margin: 0 15px;
@@ -48,13 +69,39 @@ nav a {
   transition: color 0.3s;
 }
 
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 80px;
+}
+
+nav .logo img {
+  max-width: 240px;
+}
+
+nav .logo span {
+  display: block;
+}
+
+nav .logo span:nth-child(2) {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+nav .logo span:nth-child(1) {
+  font-weight: lighter;
+}
+
 nav a:hover {
-  color: #ffd700;
+  color: var(--yellow);
 }
 
 section {
   margin: 80px auto;
-  padding: 20px; /* Reduced padding for smaller screens */
+  padding: 20px;
   background-color: white;
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;

@@ -19,7 +19,7 @@ header {
   background-position: center;
   min-height: 500px;
   text-align: center;
-  padding: 90px 0 95px 0;
+  padding: 150px 0 95px 0;
   position: relative;
   z-index: 1;
   display: flex;
@@ -28,7 +28,7 @@ header {
 }
 
 .header-content {
-  max-width: 55%;
+  max-width: 90%;
   text-align: center;
   color: white;
 }
@@ -53,6 +53,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: rgba(35, 35, 35, 0.8);
   padding: 10px 0;
   position: fixed;
@@ -77,7 +78,8 @@ nav a {
   justify-content: center;
   gap: 10px;
   text-align: center;
-  padding: 0 80px;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .logo img {
@@ -89,8 +91,6 @@ nav a {
 }
 
 .cta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   background-color: var(--yellow);
 }
 
@@ -106,7 +106,6 @@ nav a {
 
 .call-us {
   background-color: var(--dark);
-  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
 .cta a {
@@ -145,14 +144,10 @@ nav a:hover {
 #about {
   max-width: 80%;
   margin: 70px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
 }
 
-#about article:nth-child(1) {
-  padding: 50px;
+#about img {
+  max-width: 100%;
 }
 
 #about h2 {
@@ -204,13 +199,11 @@ section p {
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
-  content: '';
+  content: "";
 }
 
 #gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: -10px;
+  margin: -10px;
 }
 
 #gallery img {
@@ -230,7 +223,48 @@ footer a {
   text-decoration: none;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-  
+@media (min-width: 1024px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 980px) {
+  header {
+    padding: 90px 0 95px 0;
+  }
+
+  .header-content {
+    max-width: 55%;
+  }
+
+  #about img {
+    max-width: 100%;
+  }
+
+  #about article:nth-child(1) {
+    padding: 50px;
+  }
+
+  .logo {
+    padding: 0 80px;
+    width: fit-content;
+  }
+
+  .cta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .call-us {
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  }
+
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

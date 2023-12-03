@@ -1,6 +1,8 @@
 :root {
   --main-font: "Montserrat", sans-serif;
   --yellow: #ffc326;
+  --dark: #232323;
+  --shadow: #b4b4b430;
 }
 
 body {
@@ -86,6 +88,43 @@ nav .logo span {
   display: block;
 }
 
+#cta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--yellow);
+}
+
+#cta article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  color: var(--dark);
+  font-size: 1.3em;
+}
+
+.call-us {
+  background-color: var(--dark);
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+.call-us a {
+  text-decoration: none;
+  color: var(--yellow);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#cta i {
+  background-color: var(--shadow);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 2em;
+  color: white;
+  margin-top: 10px;
+}
+
 nav .logo span:nth-child(2) {
   color: var(--yellow);
   font-weight: bold;
@@ -97,16 +136,6 @@ nav .logo span:nth-child(1) {
 
 nav a:hover {
   color: var(--yellow);
-}
-
-section {
-  margin: 80px auto;
-  padding: 20px;
-  background-color: white;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  text-align: center;
-  max-width: 800px;
 }
 
 section h2 {

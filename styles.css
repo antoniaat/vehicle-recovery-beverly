@@ -218,7 +218,7 @@ section p {
 }
 
 footer {
-  background-color: #333;
+  background-color: var(--dark);
   color: white;
   text-align: center;
   padding: 1em 0;
@@ -230,40 +230,7 @@ footer a {
   text-decoration: none;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 /* Media Queries */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 2em;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 10px 0;
-  }
-
-  section {
-    padding: 10px;
-  }
-
-  .service-item,
-  .why-choose-us-item {
-    margin-bottom: 20px;
-  }
-
-  .service-icon,
-  .why-choose-us-item .icon {
-    font-size: 3em;
-    margin-bottom: 5px;
-  }
+  
 }

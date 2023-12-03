@@ -71,7 +71,7 @@ nav a {
   transition: color 0.3s;
 }
 
-nav .logo {
+.logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,21 +80,21 @@ nav .logo {
   padding: 0 80px;
 }
 
-nav .logo img {
+.logo img {
   max-width: 240px;
 }
 
-nav .logo span {
+.logo span {
   display: block;
 }
 
-#cta {
+.cta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: var(--yellow);
 }
 
-#cta article {
+.cta article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,14 +109,18 @@ nav .logo span {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
-.call-us a {
+.cta a {
   text-decoration: none;
+  color: var(--dark);
+}
+
+.call-us a {
   color: var(--yellow);
   font-size: 1.5em;
   font-weight: bold;
 }
 
-#cta i {
+.cta i {
   background-color: var(--shadow);
   padding: 10px;
   border-radius: 50%;
@@ -138,10 +142,48 @@ nav a:hover {
   color: var(--yellow);
 }
 
-section h2 {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 20px;
+#about {
+  max-width: 80%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#about article:nth-child(1) {
+  padding: 50px;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+#about .subtitle {
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+#about ul {
+  padding: 0;
+}
+
+#about h2 {
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+
+#about ul li {
+  border-bottom: 1px solid var(--shadow);
+  padding: 8px 0;
+  list-style: none;
+}
+
+#about ul li i {
+  color: var(--yellow);
+  font-size: 1.3em;
+  margin-right: 8px;
 }
 
 section p {
@@ -149,25 +191,30 @@ section p {
   margin-bottom: 15px;
 }
 
-.separator {
-  height: 2px;
-  background-color: #ccc;
-  margin: 40px 0;
+#map {
+  position: relative;
 }
 
-.service-item,
-.why-choose-us-item {
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#map::before {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  background: url(./images/hook.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  content: '';
 }
 
-.service-icon,
-.why-choose-us-item .icon {
-  font-size: 4em;
-  color: #333;
-  margin-bottom: 10px;
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: -10px;
+}
+
+#gallery img {
+  max-width: 100%;
 }
 
 footer {
@@ -175,8 +222,6 @@ footer {
   color: white;
   text-align: center;
   padding: 1em 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -190,12 +235,6 @@ footer a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.map {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 20px;
 }
 
 /* Media Queries */
